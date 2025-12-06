@@ -1,0 +1,16 @@
+.order-page {
+  display: flex;
+  flex-direction: column;
+  background-color: #fffaf5;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.order-content {
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  gap: 20px;
+  padding: 20px 40px;
+  box-sizing: border-box;
+  height: calc(100vh - 150px);
+}

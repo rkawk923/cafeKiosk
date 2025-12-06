@@ -1,0 +1,155 @@
+/* ────────────────────────────────
+   📜 OrderHistory.css (개선 버전)
+──────────────────────────────── */
+.order-page {
+  flex: 1;
+  background: #f6f7f9;
+  height: 100vh; /* 전체 뷰 높이 확보 */
+  overflow-y: auto; /* 스크롤 가능 */
+}
+
+/* 검색/정렬 컨트롤 영역 */
+.order-controls {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  padding: 12px 20px;
+}
+
+.order-search {
+  width: 220px;
+  height: 36px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  padding: 0 10px;
+  font-size: 14px;
+  background: #fff;
+}
+
+.order-sort-buttons {
+  display: flex;
+  gap: 8px;
+}
+
+.sort-btn {
+  height: 36px;
+  padding: 0 12px;
+  border-radius: 8px;
+  border: 1px solid #ddd;
+  background: #fff;
+  color: #333;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.sort-btn.active {
+  border-color: #f4a261;
+  color: #f4a261;
+  box-shadow: 0 0 0 2px rgba(244, 162, 97, 0.15);
+}
+
+/* 리스트 */
+.order-list {
+  padding: 0 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  width: 100%;
+  max-width: 800px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+/* 카드 */
+.order-card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  transition: transform 0.2s ease, box-shadow 0.25s ease;
+}
+
+.order-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+}
+
+/* 상단 */
+.order-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 14px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 8px;
+}
+
+.order-no {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #333;
+}
+
+.order-total {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: #f4a261;
+}
+
+/* 아이템 목록 */
+.order-items {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.order-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.92rem;
+  color: #444;
+  padding: 4px 0;
+}
+
+/* 하단 */
+.order-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.8rem;
+  color: #777;
+  border-top: 1px solid #eee;
+  padding-top: 10px;
+}
+
+/* 주문 타입 배지 */
+.order-footer span:first-child {
+  background-color: #f4a261;
+  color: #fff;
+  padding: 3px 10px;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 0.78rem;
+}
+
+/* 반응형 */
+@media (max-width: 600px) {
+  .order-card {
+    padding: 16px;
+  }
+
+  .order-top {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .order-footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

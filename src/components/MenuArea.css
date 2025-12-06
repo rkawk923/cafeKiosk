@@ -1,0 +1,21 @@
+.menu-area {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(230px, 1fr)
+  ); /* ✅ 일정한 카드 크기 유지 */
+  gap: 24px;
+  background: #fff;
+  padding: 32px;
+  border-radius: 16px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+  overflow-y: auto;
+}
+
+.menu-area::-webkit-scrollbar {
+  width: 8px;
+}
+.menu-area::-webkit-scrollbar-thumb {
+  background: #e0d4c7;
+  border-radius: 4px;
+}

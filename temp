@@ -1,0 +1,135 @@
+// 샘플 상품 데이터
+const sampleProducts = [
+  // 커피
+  {
+    id: "1",
+    name: "아메리카노",
+    price: 4500,
+    image:
+      "https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBlc3ByZXNzbyUyMGxhdHRlfGVufDF8fHx8MTc1ODMyOTg3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "coffee",
+    description: "진한 에스프레소의 깊은 맛",
+  },
+  {
+    id: "2",
+    name: "카페라떼",
+    price: 5000,
+    image:
+      "https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBlc3ByZXNzbyUyMGxhdHRlfGVufDF8fHx8MTc1ODMyOTg3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "coffee",
+    description: "부드러운 우유와 에스프레소의 조화",
+  },
+  {
+    id: "3",
+    name: "카푸치노",
+    price: 5500,
+    image:
+      "https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBlc3ByZXNzbyUyMGxhdHRlfGVufDF8fHx8MTc1ODMyOTg3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "coffee",
+    description: "풍성한 거품과 진한 커피의 만남",
+  },
+  {
+    id: "4",
+    name: "바닐라 라떼",
+    price: 5800,
+    image:
+      "https://images.unsplash.com/photo-1720214931419-7cb11ee42c59?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjb2ZmZWUlMjBlc3ByZXNzbyUyMGxhdHRlfGVufDF8fHx8MTc1ODMyOTg3NHww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "coffee",
+    description: "달콤한 바닐라 시럽이 들어간 라떼",
+  },
+  // 디저트
+  {
+    id: "5",
+    name: "크루아상",
+    price: 3500,
+    image:
+      "https://images.unsplash.com/photo-1733754348873-feeb45df3bab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcm9pc3NhbnQlMjBwYXN0cnklMjBiYWtlcnl8ZW58MXx8fHwxNzU4MjY4MTk4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "dessert",
+    description: "바삭하고 부드러운 프랑스 전통 페이스트리",
+  },
+  {
+    id: "6",
+    name: "초콜릿 쿠키",
+    price: 2800,
+    image:
+      "https://images.unsplash.com/photo-1733754348873-feeb45df3bab?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjcm9pc3NhbnQlMjBwYXN0cnklMjBiYWtlcnl8ZW58MXx8fHwxNzU4MjY4MTk4fDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "dessert",
+    description: "진한 초콜릿 칩이 들어간 쫄깃한 쿠키",
+  },
+  // 샐러드
+  {
+    id: "7",
+    name: "시저 샐러드",
+    price: 8900,
+    image:
+      "https://images.unsplash.com/photo-1651352650142-385087834d9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYWxhZCUyMGhlYWx0aHklMjBmb29kfGVufDF8fHx8MTc1ODMzNDcyNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "salad",
+    description: "신선한 로메인과 파마산 치즈, 크루통",
+  },
+  {
+    id: "8",
+    name: "그린 샐러드",
+    price: 7500,
+    image:
+      "https://images.unsplash.com/photo-1651352650142-385087834d9d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYWxhZCUyMGhlYWx0aHklMjBmb29kfGVufDF8fHx8MTc1ODMzNDcyNXww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "salad",
+    description: "각종 신선한 채소와 발사믹 드레싱",
+  },
+  // 샌드위치
+  {
+    id: "9",
+    name: "클럽 샌드위치",
+    price: 9800,
+    image:
+      "https://images.unsplash.com/photo-1716535233357-822bcc293573?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYW5kd2ljaCUyMGNhZmUlMjBmb29kfGVufDF8fHx8MTc1ODM0ODQ3M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "sandwich",
+    description: "베이컨, 치킨, 토마토, 상추가 들어간 샌드위치",
+  },
+  {
+    id: "10",
+    name: "햄 치즈 샌드위치",
+    price: 7200,
+    image:
+      "https://images.unsplash.com/photo-1716535233357-822bcc293573?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzYW5kd2ljaCUyMGNhZmUlMjBmb29kfGVufDF8fHx8MTc1ODM0ODQ3M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "sandwich",
+    description: "신선한 햄과 체다 치즈의 클래식한 조합",
+  },
+  // 케이크
+  {
+    id: "11",
+    name: "초콜릿 케이크",
+    price: 6500,
+    image:
+      "https://images.unsplash.com/photo-1650147880857-95b822f65ff9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYWtlJTIwc2xpY2UlMjBkZXNzZXJ0fGVufDF8fHx8MTc1ODM0ODQ3M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "cake",
+    description: "진한 초콜릿 케이크와 크림",
+  },
+  {
+    id: "12",
+    name: "치즈케이크",
+    price: 5800,
+    image:
+      "https://images.unsplash.com/photo-1650147880857-95b822f65ff9?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxjYWtlJTIwc2xpY2UlMjBkZXNzZXJ0fGVufDF8fHx8MTc1ODM0ODQ3M3ww&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "cake",
+    description: "부드럽고 크리미한 뉴욕스타일 치즈케이크",
+  },
+  // 스무디
+  {
+    id: "13",
+    name: "딸기 스무디",
+    price: 6200,
+    image:
+      "https://images.unsplash.com/photo-1655992590262-aeadeef445b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbW9vdGhpZSUyMGZydWl0JTIwZHJpbmt8ZW58MXx8fHwxNzU4Mjc3MzkwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "smoothie",
+    description: "신선한 딸기와 요거트로 만든 스무디",
+  },
+  {
+    id: "14",
+    name: "망고 스무디",
+    price: 6800,
+    image:
+      "https://images.unsplash.com/photo-1655992590262-aeadeef445b1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3Nzg4Nzd8MHwxfHNlYXJjaHwxfHxzbW9vdGhpZSUyMGZydWl0JTIwZHJpbmt8ZW58MXx8fHwxNzU4Mjc3MzkwfDA&ixlib=rb-4.1.0&q=80&w=1080&utm_source=figma&utm_medium=referral",
+    category: "smoothie",
+    description: "달콤한 망고와 코코넛 밀크의 조화",
+  },
+];

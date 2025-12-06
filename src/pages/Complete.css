@@ -1,0 +1,165 @@
+/* Complete.css */
+
+body {
+  background-color: #f5f7fa;
+  font-family: "Pretendard", "Noto Sans KR", sans-serif;
+  margin: 0;
+}
+
+.complete-page {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  padding: 1rem;
+}
+
+.complete-card {
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  padding: 2.5rem 2rem;
+  text-align: center;
+  width: 100%;
+  max-width: 420px;
+  animation: fadeIn 0.6s ease-in-out;
+}
+
+.checkmark {
+  font-size: 3rem;
+  color: #2b8a3e;
+  background: #e6f4ea;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  margin: 0 auto 1rem auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation: pop 0.6s ease;
+}
+
+.title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 1.8rem;
+  color: #333;
+}
+
+.order-info {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  background: #fafafa;
+  border-radius: 10px;
+  padding: 1rem;
+  text-align: left;
+  margin-bottom: 1.5rem;
+  border: 1px solid #eee;
+}
+
+.order-info div {
+  display: flex;
+  justify-content: space-between;
+  font-size: 0.95rem;
+}
+
+.order-info span {
+  color: #777;
+}
+
+.order-summary {
+  text-align: left;
+  margin-bottom: 2rem;
+}
+
+.order-summary h2 {
+  font-size: 1.1rem;
+  color: #2b2b2b;
+  margin-bottom: 0.8rem;
+}
+
+.order-summary ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  border-top: 1px solid #eee;
+  border-bottom: 1px solid #eee;
+}
+
+.order-summary li {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.6rem 0;
+  color: #444;
+  font-size: 0.95rem;
+}
+
+.total {
+  margin-top: 1rem;
+  font-size: 1rem;
+  text-align: right;
+  color: #111;
+}
+
+.redirect-msg {
+  color: #666;
+  font-size: 0.9rem;
+  margin-bottom: 1.2rem;
+}
+
+button {
+  background-color: #2b8a3e;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  padding: 0.7rem 1.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+  background-color: #237032;
+  transform: translateY(-2px);
+}
+
+/* ✨ Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes pop {
+  0% {
+    transform: scale(0.8);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* ✅ Responsive */
+@media (max-width: 480px) {
+  .complete-card {
+    padding: 2rem 1.2rem;
+  }
+
+  .title {
+    font-size: 1.4rem;
+  }
+
+  .checkmark {
+    width: 70px;
+    height: 70px;
+    font-size: 2.5rem;
+  }
+}

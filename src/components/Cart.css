@@ -1,0 +1,54 @@
+.cart {
+  display: flex;
+  flex-direction: column;
+  background: #fff9f5;
+  border-radius: 16px;
+  padding: 20px;
+  border-left: 4px solid #f4a261;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  height: 100%;
+}
+
+.cart h2 {
+  font-size: 1.4rem;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 16px;
+}
+
+.cart-list {
+  flex: 1;
+  overflow-y: auto;
+  margin-bottom: 10px;
+}
+
+/* ✅ 하단 여백 보강 */
+.cart-footer {
+  border-top: 2px solid #eee;
+  padding-top: 12px;
+  padding-bottom: 28px; /* 여유 확대 */
+}
+
+.cart-footer p {
+  font-weight: 600;
+  margin-bottom: 6px;
+  text-align: right;
+}
+
+.pay-btn {
+  background: #f4a261;
+  border: none;
+  width: 100%;
+  padding: 16px 0;
+  color: white;
+  font-weight: bold;
+  font-size: 1.2rem;
+  border-radius: 10px;
+  margin-top: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+}
+
+.pay-btn:hover {
+  background: #e76f51;
+}

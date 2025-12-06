@@ -1,0 +1,38 @@
+.header {
+  flex-shrink: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #f4a261;
+  color: white;
+  padding: 0px 40px;
+  height: 90px;
+  /* 🔽 Nav와의 이중선 방지 */
+  border: none;
+}
+
+.header-title {
+  font-size: 2.3rem;
+  font-weight: 800;
+  margin: 0;
+}
+
+/* ✅ pill형 오더 타입 버튼 그대로 유지 */
+.header-type {
+  background: white;
+  color: #f4a261;
+  font-weight: bold;
+  font-size: 1.15rem;
+  padding: 12px 28px;
+  border-radius: 40px;
+  border: none;
+  cursor: pointer;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.2);
+  transition: all 0.25s ease-in-out;
+}
+
+.header-type:hover {
+  background: #fff3e5;
+  color: #e76f51;
+  transform: translateY(-2px);
+}
