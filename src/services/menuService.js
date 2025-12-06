@@ -3,7 +3,7 @@ import { collection, getDocs } from "firebase/firestore";
 import { db } from "../firebase/firebaseConfig";
 
 /**
- * Firestore에서 모든 메뉴를 가져옵니다.
+ * Firestore에서 모든 메뉴를 가져온다
  * @returns {Promise<Array>} 메뉴 리스트
  */
 export const fetchMenus = async () => {
@@ -12,8 +12,8 @@ export const fetchMenus = async () => {
     const menus = querySnapshot.docs.map((doc) => ({
       id: doc.data().id, // Firestore의 id 필드 (ex: p1)
       name: doc.data().name, // ex: "아메리카노"
-      category: doc.data().category,
-      price: doc.data().price,
+      category: doc.data().category, // ex: "커피"
+      price: doc.data().price, // ex: 4000
       img: doc.data().img, // ex: "coffeeImg"
     }));
     return menus;

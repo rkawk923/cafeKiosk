@@ -1,5 +1,3 @@
-// Firebase 초기화 설정
-// 사용 전 이 파일의 CONFIG 값을 Firebase 콘솔의 프로젝트 설정으로 교체하세요.
 import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 

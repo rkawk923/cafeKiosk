@@ -3,7 +3,6 @@ import { useNavigate } from "react-router-dom";
 import { useOrder } from "../context/OrderContext";
 import "./Intro.css";
 
-// ✅ react-icons
 import { FaStore, FaMugHot } from "react-icons/fa";
 import { CiCoffeeCup } from "react-icons/ci";
 
@@ -23,7 +22,6 @@ export default function Intro() {
 
   return (
     <div className="intro-container">
-      {/* 결제 내역 이동 버튼 (오른쪽 상단 작은 버튼) */}
       <button
         onClick={() => goOrderHistory("내역")}
         className="order-history-btn"

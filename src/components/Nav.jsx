@@ -5,7 +5,7 @@ import { useMenu } from "../context/MenuContext";
 export default function Nav() {
   const { menus, selectedCategory, filterByCategory } = useMenu();
 
-  // ✅ menus에서 카테고리 자동 추출
+  // menus에서 카테고리 자동 추출
   const categories = useMemo(() => {
     if (!menus?.length) return [];
     return [...new Set(menus.map((m) => m.category))];

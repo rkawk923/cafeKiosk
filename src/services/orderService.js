@@ -7,13 +7,9 @@ import {
 } from "firebase/firestore";
 import { db } from "../firebase/firebaseConfig";
 
-/**
- * Firestore에 주문을 저장합니다.
- * Context에서 전달받은 orderData 형식을 그대로 받습니다.
- */
+//주문 저장
 export const saveOrder = async (orderData) => {
   try {
-    // ✅ DB용 변환은 여기서만 담당
     const payload = {
       orderNo: orderData.orderNo,
       cafeName: orderData.cafeName,
@@ -39,9 +35,7 @@ export const saveOrder = async (orderData) => {
   }
 };
 
-/**
- * Firestore에서 다음 주문번호 계산
- */
+//Firestore에서 다음 주문번호 계산
 export const fetchNextOrderNo = async () => {
   try {
     const querySnapshot = await getDocs(collection(db, "orders"));
@@ -58,6 +52,7 @@ export const fetchNextOrderNo = async () => {
   }
 };
 
+//주문 내역 리스트를 가져옴
 export const getOrderHistory = async () => {
   const q = query(collection(db, "orders"), orderBy("orderTime", "desc"));
 
