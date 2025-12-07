@@ -42,6 +42,8 @@ export const fetchNextOrderNo = async () => {
     if (querySnapshot.empty) return 1;
 
     const orders = querySnapshot.docs.map((doc) => doc.data());
+
+    //내림차순 후 첫번째 주문
     const lastOrder = orders.sort(
       (a, b) => parseInt(b.orderNo) - parseInt(a.orderNo)
     )[0];
